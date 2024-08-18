@@ -1,0 +1,49 @@
+[package]
+name = "hnsw"
+version = "0.1.0"
+edition = "2021"
+authors = ["Dilshad <a-rustacean@outlook.com>"]
+
+[dependencies]
+arrayvec = "0.7.4"
+index_vec = "0.1.4"
+rkyv = { version = "0.7.44", optional = true }
+serde = { version = "1.0.207", features = ["derive"], optional = true }
+serde-big-array = { version = "0.5.1", optional = true }
+
+[dev-dependencies]
+criterion = "0.5.1"
+tokio = { version = "1.38.1", features = ["full"] }
+rand = "0.8.5"
+serde_json = "1.0.125"
+
+[features]
+serde = [
+  "dep:serde",
+  "dep:serde-big-array",
+  "index_vec/serde",
+  "arrayvec/serde",
+]
+# TODO: doesn't compile with this feature flag, have to send a PR to `arrayvec` to enable `rkyv` (de)serialization for `ArrayVec`
+rkyv = ["dep:rkyv", "index_vec/rkyv"]
+default = []
+
+[[bench]]
+name = "search"
+harness = false
+
+[[example]]
+name = "serde_serialize"
+required-features = ["serde"]
+
+[[example]]
+name = "serde_deserialize"
+required-features = ["serde"]
+
+[[example]]
+name = "rkyv_serialize"
+required-features = ["rkyv"]
+
+[[example]]
+name = "rkyv_deserialize"
+required-features = ["rkyv"]
