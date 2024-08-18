@@ -1,4 +1,4 @@
 [alias]
 # Do not append `--` or it will break IDEs
-ck = "check --workspace --all-features --all-targets --locked"
-lint = "clippy --workspace --all-targets --all-features"
+ck = "check --all-targets --features=serde --locked"
+lint = "clippy --workspace --all-targets --features=serde"
