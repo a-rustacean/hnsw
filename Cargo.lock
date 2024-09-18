@@ -323,7 +323,7 @@ dependencies = [
  "criterion",
  "index_vec",
  "rand",
- "rkyv 0.8.6",
+ "rkyv 0.8.8",
  "serde",
  "serde-big-array",
  "serde_json",
@@ -670,9 +670,9 @@ dependencies = [
 
 [[package]]
 name = "rkyv"
-version = "0.8.6"
+version = "0.8.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "033d93c209fc45d9b00a8929864c4171f37444c5707e9c2cd6f3265fa00169e2"
+checksum = "395027076c569819ea6035ee62e664f5e03d74e281744f55261dd1afd939212b"
 dependencies = [
  "bytecheck 0.8.0",
  "bytes",
@@ -682,7 +682,7 @@ dependencies = [
  "ptr_meta 0.3.0",
  "rancor",
  "rend 0.5.0",
- "rkyv_derive 0.8.6",
+ "rkyv_derive 0.8.8",
  "tinyvec",
  "uuid",
 ]
@@ -700,9 +700,9 @@ dependencies = [
 
 [[package]]
 name = "rkyv_derive"
-version = "0.8.6"
+version = "0.8.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bbd6a412e98f7770e9b69d5367df020292987223904cf13af013417300837d3d"
+checksum = "09cb82b74b4810f07e460852c32f522e979787691b0b7b7439fe473e49d49b2f"
 dependencies = [
  "proc-macro2",
  "quote",
