@@ -8,7 +8,7 @@ authors = ["Dilshad <a-rustacean@outlook.com>"]
 arrayvec = "0.7.6"
 index_vec = "0.1.4"
 rkyv = { version = "0.8.8", optional = true }
-serde = { version = "1.0.212", features = ["derive"], optional = true }
+serde = { version = "1.0.213", features = ["derive"], optional = true }
 serde-big-array = { version = "0.5.1", optional = true }
 
 [dev-dependencies]
