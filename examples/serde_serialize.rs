@@ -1,12 +1,12 @@
 use hnsw::{distance::euclidean::EuclideanDistance, hnsw::Hnsw};
-use rand::{thread_rng, Rng};
+use rand::{rng, Rng};
 
 fn main() {
     let mut hnsw = Hnsw::<32, EuclideanDistance, 6>::default();
-    let mut rng = thread_rng();
+    let mut rng = rng();
 
     for _ in 0..10000 {
-        let vec = rng.gen();
+        let vec = rng.random();
         hnsw.insert(vec);
     }
 
