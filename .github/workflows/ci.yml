@@ -54,7 +54,7 @@ jobs:
       - uses: samypr100/setup-dev-drive@v3
         with:
           workspace-copy: true
-          drive-size: 8GB
+          drive-size: 16GB
 
       - name: Install Rust
         working-directory: ${{ env.DEV_DRIVE_WORKSPACE }}
